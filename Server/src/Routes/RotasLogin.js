@@ -1,5 +1,4 @@
 const express = require('express');
-const router = express.Router()
 
 class RotasLogin {
     static iniciar(){
@@ -7,11 +6,8 @@ class RotasLogin {
         rotas.get('/listaUsuarios', async (req, res) => {
             res.send('<h1>Teste</h1>')
         })
+        return rotas
     }
 }
 
-// app.get('/', (req, res) => {
-//     res.send('<h1>Criando servidor</h1>')
-// })
-
-module.exports = router
+module.exports = RotasLogin;
