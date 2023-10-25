@@ -1,4 +1,6 @@
-const pj = require('../../../package.json')
+const express = require('express')
+const pj = require('../../../package.json');
+const RotasLogin = require('./RotasLogin');
 class Rotas {
     static iniciar() {
         try {
