@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  # Configuração do MySQL
+  mysql:
+    image: mysql:latest
+    container_name: easycert.api
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: 'easycert_database'
+  # Configuração do Node.js 
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
