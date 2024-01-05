@@ -14,7 +14,7 @@ export class MysqlConfigService implements TypeOrmOptionsFactory{
             password: 'user.root',
             database: 'easycert',
             entities: [__dirname + '/../**/*.entity.{js,ts}'],
-            synchronize: true
+            synchronize: false
         }
     }
 }
