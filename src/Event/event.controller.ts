@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Put } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { EventService } from "./event.service";
 import { EventEntity } from "./event.entity";
 import { CreateEventDTO } from "./dto/create-event.dto";
@@ -31,14 +31,23 @@ export class EventController{
             retorno: eventEntity
         }
     }
+    
     @Put('/:id')
     async updateEvent(@Param('id') id: string, @Body() newData: UpdateEventDTO){
-        const user = await this.eventService.updateEvent(id,newData)
-        console.log(user);
+        await this.eventService.updateEvent(id,newData)
         return{
             status: 200,
             message: 'Evento atualizado com sucesso',
-            retorno: user
+            retorno: newData,
+        }
+    }
+
+    @Delete('/:id')
+    async deleteEvent(@Param('id') id: string){
+        await this.eventService.deleteEvent(id)
+        return{
+            status: 200,
+            message: 'Evento deletado com sucesso'
         }
     }
 }
