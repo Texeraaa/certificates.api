@@ -11,7 +11,7 @@ export class ParticipantEntity{
     nomeParticipante: string
 
     @Column({
-        length: 11,,
+        length: 11,
         unique: true
     })
     cpfParticipante: string
