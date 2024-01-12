@@ -7,7 +7,6 @@ export class CourseEntity{
 
     @Column({
         length: 255,
-        nullable: false,
         unique: true
     })
     nomeCurso: string

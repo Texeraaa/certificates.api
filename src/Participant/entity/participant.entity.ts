@@ -7,32 +7,27 @@ export class ParticipantEntity{
 
     @Column({
         length: 255,
-        nullable: false
     })
     nomeParticipante: string
 
     @Column({
-        length: 11,
-        nullable: false,
+        length: 11,,
         unique: true
     })
     cpfParticipante: string
 
     @Column({
         length:11,
-        nullable: false
     })
     telefoneParticipante: string
 
     @Column({
         length: 255,
-        nullable: false
     })
     emailParticipante: string
 
     @Column({
         length: 255,
-        nullable: false
     })
     senhaParticipante: string
 }
