@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { EventService } from "./event.service";
-import { EventEntity } from "./event.entity";
+import { EventEntity } from "./entity/event.entity";
 import { CreateEventDTO } from "./dto/create-event.dto";
 import { v4 as uuid } from "uuid"
 import { UpdateEventDTO } from "./dto/update-event.dto";
