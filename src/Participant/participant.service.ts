@@ -1,5 +1,5 @@
 import { InjectRepository } from "@nestjs/typeorm";
-import { ParticipantEntity } from "./participant.entity";
+import { ParticipantEntity } from "./entity/participant.entity";
 import { Repository } from "typeorm";
 import { CreateParticipantDTO } from "./dto/create-participant.dto";
 
