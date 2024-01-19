@@ -5,7 +5,7 @@ import { CreateEventDTO } from "./dto/create-event.dto";
 import { v4 as uuid } from "uuid"
 import { UpdateEventDTO } from "./dto/update-event.dto";
 
-@Controller('/eventos')
+@Controller('/events')
 export class EventController{
     constructor(private eventService: EventService){}
 
