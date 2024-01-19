@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity({ name: 'eventos'})
+@Entity({ name: 'Evento'})
 export class EventEntity{
     @PrimaryGeneratedColumn('uuid')
     idEvento: string
@@ -13,11 +13,13 @@ export class EventEntity{
 
     @Column({
         name: 'horaEvento',
+        type: 'time'
     })
     horaEvento: string
 
     @Column({
         name: 'dataEvento',
+        type: 'date'
     })
     dataEvento: string
 
