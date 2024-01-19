@@ -1,4 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { CourseEntity } from "src/course/entity/course.entity";
+import { TypeParticipantEntity } from "src/type-participant/entity/type-participant.entity";
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({name: 'Participante'})
 export class ParticipantEntity{
@@ -30,4 +32,12 @@ export class ParticipantEntity{
         length: 255,
     })
     senhaParticipante: string
+
+    @ManyToOne(() => CourseEntity)
+    @JoinColumn({name: 'idCurso'})
+    idCurso: CourseEntity
+
+    @ManyToOne(() => TypeParticipantEntity)
+    @JoinColumn({name: 'idTipoParticipante'})
+    idTipoParticipante: TypeParticipantEntity
 }
