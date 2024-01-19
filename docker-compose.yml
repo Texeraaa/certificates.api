@@ -1,19 +1,29 @@
 version: '3'
 
 services:
-  # Configuração do MySQL
   mysql:
-    image: mysql:latest
-    container_name: easycert.api
+    image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: 'easycert_database'
-  # Configuração do Node.js 
-  nodejs:
-    build:
-      context: .
-      dockerfile: Dockerfile
+      MYSQL_ROOT_PASSWORD: user.root
+      MYSQL_DATABASE: easycert
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user.root*
     ports:
-      - "3000:3000"
+      - "8080:3306"
+    networks:
+      - mynetwork
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - "8081:80"
+    networks:
+      - mynetwork
     depends_on:
       - mysql
+
+networks:
+  mynetwork:
