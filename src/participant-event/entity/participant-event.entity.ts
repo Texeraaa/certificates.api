@@ -2,7 +2,7 @@ import { EventEntity } from "src/event/entity/event.entity";
 import { ParticipantEntity } from "src/participant/entity/participant.entity";
 import { Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity()
+@Entity({name: 'ParticipanteEvento'})
 export class ParticipantEventEntity{
     @PrimaryGeneratedColumn('uuid')
     id: string

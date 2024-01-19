@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity()
+@Entity({name: 'TipoParticipante'})
 export class TypeParticipantEntity {
 
     @PrimaryGeneratedColumn('uuid')
