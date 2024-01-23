@@ -2,6 +2,7 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { ParticipantEntity } from "./entity/participant.entity";
 import { Repository } from "typeorm";
 import { CreateParticipantDTO } from "./dto/create-participant.dto";
+import { UpdateParticipantDTO } from "./dto/update-participant.dto";
 
 export class ParticipantService{
     constructor(
@@ -10,14 +11,15 @@ export class ParticipantService{
     ){}
 
     async readParticipant(){
-        await this.participantRepository.find()
+        return await this.participantRepository.find()
     }
 
     async createParticipant(participantEntity: CreateParticipantDTO){
-        await this.participantRepository.save(participantEntity)
+        const participant = await this.participantRepository.save(participantEntity)
+        return participant
     }
 
-    async updateParticipant(id: string,newParticipant: ParticipantEntity){
+    async updateParticipant(id: string, newParticipant: UpdateParticipantDTO){
         await this.participantRepository.update(id,newParticipant)
     }
 
