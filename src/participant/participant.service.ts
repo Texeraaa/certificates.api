@@ -14,6 +14,10 @@ export class ParticipantService{
         return await this.participantRepository.find()
     }
 
+    async readOneParticipant(id: string){
+        return await this.participantRepository.findOne({where:{idParticipante: id}})
+    }
+
     async createParticipant(participantEntity: CreateParticipantDTO){
         const participant = await this.participantRepository.save(participantEntity)
         return participant
