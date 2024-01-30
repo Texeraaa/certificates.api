@@ -13,6 +13,12 @@ export class ParticipantController {
         const res = await this.participantService.readParticipant()
         return res
     }
+
+    @Get('/:id')
+    async readOnlyParticipant(@Param('id')id: string){
+        const res = await this.participantService.readOneParticipant(id)
+        return res
+    }
     
     @Post()
     async createParticipant(@Body() createParticipantDTO: CreateParticipantDTO){

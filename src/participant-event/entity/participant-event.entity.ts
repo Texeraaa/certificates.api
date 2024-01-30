@@ -9,13 +9,13 @@ export class ParticipantEventEntity{
 
     @ManyToOne(() => ParticipantEntity)
     @JoinColumn({name: 'idParticipante'})
-    idParticipante: ParticipantEntity
+    idParticipante: string
 
     @ManyToOne(() => EventEntity)
     @JoinColumn({name: 'idEvento'})
-    idEvento: EventEntity
+    idEvento: string
 
     @ManyToOne(() => ParticipantEventEntity)
     @JoinColumn({name: 'idTipoPapel'})
-    idTipoPapel: ParticipantEventEntity
+    idTipoPapel: string
 }
