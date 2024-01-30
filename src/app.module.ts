@@ -6,6 +6,7 @@ import { EventModule } from './event/event.module';
 import { ParticipantModule } from './participant/participant.module';
 import { ParticipantEventModule } from './participant-event/participant-event.module';
 import { EventPaperModule } from './event-paper/event-paper.module';
+import { CourseModule } from './course/course.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { EventPaperModule } from './event-paper/event-paper.module';
     ParticipantModule,
     ParticipantEventModule,
     EventPaperModule,
+    CourseModule,
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRootAsync({
       useClass: MysqlConfigService,
