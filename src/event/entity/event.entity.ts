@@ -27,4 +27,14 @@ export class EventEntity{
         name: 'cargaHorariaEvento',
     })
     cargaHorariaEvento: number
+
+    @Column({
+        name: 'status',
+    })
+    status: string
+
+    @Column({
+        name: 'quantidadeDeAlunos',
+    })
+    quantidadeDeAlunos: number
 }
