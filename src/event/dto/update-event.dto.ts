@@ -20,4 +20,9 @@ export class UpdateEventDTO{
     @IsNumber({allowNaN: false, maxDecimalPlaces: 2,allowInfinity: false})
     @IsOptional()
     cargaHorariaEvento: number
+
+    @IsNotEmpty({message: 'o campo status não pode ser vazio'})
+    @IsString({message: 'o campo status deve ser do tipo string'})
+    @IsOptional()
+    status: string
 }
