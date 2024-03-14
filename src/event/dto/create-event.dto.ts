@@ -16,4 +16,8 @@ export class CreateEventDTO{
     @IsNotEmpty({message: 'o campo cargaHorariaEvento deve ser preenchido'})
     @IsNumber({allowNaN: false, maxDecimalPlaces: 2,allowInfinity: false})
     cargaHorariaEvento: number
+
+    @IsNotEmpty({message: 'o campo status deve ser preenchido'})
+    @IsString({message: 'o campo status deve ser do tipo string'})
+    status: string
 }

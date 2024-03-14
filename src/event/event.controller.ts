@@ -22,6 +22,7 @@ export class EventController{
         eventEntity.dataEvento = criaEventoDto.dataEvento
         eventEntity.horaEvento = criaEventoDto.horaEvento
         eventEntity.cargaHorariaEvento = criaEventoDto.cargaHorariaEvento
+        eventEntity.status = criaEventoDto.status
 
         await this.eventService.createEvent(eventEntity)
 
