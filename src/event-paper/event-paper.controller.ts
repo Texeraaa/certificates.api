@@ -1,12 +1,4 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  HttpCode,
-  Param,
-  Post,
-} from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { EventPaperService } from './event-paper.service';
 import { CreateEventPaperDTO } from './dto/create-event-paper.dto';
 import {

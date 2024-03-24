@@ -6,7 +6,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-   const config = new DocumentBuilder()
+  const config = new DocumentBuilder()
     .setTitle('EASYCERT.API')
     .setDescription('API EASYCERT')
     .setVersion('1.2.6')

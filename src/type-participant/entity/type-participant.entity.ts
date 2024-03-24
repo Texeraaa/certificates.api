@@ -1,14 +1,13 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({name: 'TipoParticipante'})
+@Entity({ name: 'TipoParticipante' })
 export class TypeParticipantEntity {
+  @PrimaryGeneratedColumn('uuid')
+  idTipoParticipante: string;
 
-    @PrimaryGeneratedColumn('uuid')
-    idTipoParticipante: string
-
-    @Column({
-        length: 255,
-        unique: true
-    })
-    nomeTipoParticipante: string
+  @Column({
+    length: 255,
+    unique: true,
+  })
+  nomeTipoParticipante: string;
 }
