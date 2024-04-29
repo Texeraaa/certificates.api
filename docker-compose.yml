@@ -4,10 +4,10 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: user.root
-      MYSQL_DATABASE: easycert
-      MYSQL_USER: user
-      MYSQL_PASSWORD: user.root*
+      MYSQL_ROOT_PASSWORD: 
+      MYSQL_DATABASE: 
+      MYSQL_USER: 
+      MYSQL_PASSWORD: 
     ports:
       - "8080:3306"
     networks:
